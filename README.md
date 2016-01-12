@@ -1,53 +1,53 @@
 # Ruby Setup on OSX
-Setting up and installing rbenv, ruby-build, bundler, rbenv-gemset on OS X
+### Setting up and installing rbenv, ruby-build, bundler, rbenv-gemset on OS X
 
-Download XCode from Mac App Store
+* Download XCode from Mac App Store
 
-Install command line tools
+* Install command line tools<br>
 `xcode-select --install`
 
-Install Homebrew
+* Install Homebrew<br>
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-Install rbenv using Homebrew
-'brew install rbenv'
+* Install rbenv using Homebrew<br>
+`brew install rbenv`
 
-Modify bash_profile or profile to enable rbenv
+* Modify bash_profile or profile to enable rbenv<br>
 `echo 'eval "$(rbenv init -)"' >> ~/.profile`<br>
 `source ~/.profile`
 
-Install ruby-build
+* Install ruby-build<br>
 `brew install ruby-build`
 
-Check for the latest stable ruby versions
+* Check for the latest stable ruby versions<br>
 `ruby-build --definitions`
 
-Install latest ruby version
+* Install latest ruby version<br>
 `rbenv install 2.2.3`<br>
 `rbenv rehash`
 
-Set global ruby version to the installed one
+* Set global ruby version to the installed one<br>
 `rbenv global 2.2.3`
 
-Show current ruby version
+* Show current ruby version<br>
 `ruby -v`
 
-Show all installed ruby versions
+* Show all installed ruby versions<br>
 `rbenv versions`
 
-Install bundler
+* Install bundler<br>
 `gem install bundler`<br>
 `rbenv rehash`
 
-Install rbenv-gemset
+* Install rbenv-gemset<br>
 `brew install rbenv-gemset`
 
-create a new gemset for your ruby project
+* create a new gemset for your ruby project<br>
 `rbenv gemset create {ruby version} {gemset-name}`
 ###### Example
 `rbenv gemset create 2.2.3 project1`
 
-create .rbenv-gemset
+* create .rbenv-gemset
 `echo '{gemset-name}'> .rbenv-gemset`
 ###### Example
 `echo 'project1'> .rbenv-gemset`
